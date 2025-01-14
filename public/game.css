@@ -1,0 +1,100 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+table, button{
+    margin: 0 auto 50px auto;
+    cursor: pointer;
+}
+.button{
+    color: #ffffff;
+    background: #00db00;
+    padding: 5px;
+    font-size: 28px;
+    border-radius: 5px;
+    border: none;
+}
+.button:focus{
+    outline: 2px solid #60f560;
+}
+img{
+    width: 100px;
+    height: 100px;
+    -webkit-user-drag: none;
+}
+td{
+    box-sizing: border-box;
+    width: 120px;
+    height: 120px;
+    padding: 5px;
+}
+#heading{
+    text-shadow: 0 0 1px black;
+    color: red;
+    font-size: 72px;
+}
+#alertHead{
+    font-size: 56px;
+}
+.tip{
+    height: 30px;
+    width: 30px;
+}
+h2{
+    font-size: 28px;
+}
+#alert{
+    position: absolute;
+    display: none;
+    height: 120%;
+    width: 100%;
+    background-color: white;
+}
+.border-Bottom{
+    border-bottom: 3px solid black;
+}
+.border-Right{
+    border-right: 3px solid black;
+}
+.border-Left{
+    border-left: 3px solid black;
+}
+.border-Top{
+    border-top: 3px solid black;
+}
+
+#loading {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    display: none;
+}
+
+@media screen and (max-width: 400px) {
+    td{
+        height: 80px;
+        width: 80px;
+    }
+    img{
+        height: 60px;
+        width: 60px;
+    }
+  }
+
+/*To remove blue screen on select on mobile device*/
+table::selection {
+    background: transparent;
+}
+table::-moz-selection {
+    background-color: transparent;
+}
+table {
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}

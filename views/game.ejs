@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="/game.css">
+    <link rel="stylesheet" href="/lib/css/custom-alert-bootstrap.css">
+    <link rel="stylesheet" href="/lib/css/custom-alert.css">
+</head>
+<body>
+    <div id="loading">
+        <h1>Please wait</h1>
+        <p>Let your opponent join the match.</p>
+    </div>
+    <div id="alert">
+        <h1 id="alertHead"></h1>
+        <button class="button" id="alertRematch">Retry</button>
+       <!--  <button id="alertQuit">Quit</button> -->
+    </div>
+    <h1 id="heading">Tic Tac Toe</h1>
+    <p>Turn : <span id="turnDisplay"></span> Turn</p>
+    <table>
+        <tr>
+            <td class="border-Bottom border-Right"><img alt=""></td>
+            <td class="border-Bottom"><img alt=""></td>
+            <td class="border-Bottom border-Left"><img alt=""></td>
+        </tr>
+        <tr>
+            <td class=" border-Right"><img alt=""></td>
+            <td class=""><img alt=""></td>
+            <td class=" border-Left"><img alt=""></td>
+        </tr>
+        <tr>
+            <td class="border-Top border-Right"><img alt=""></td>
+            <td class="border-Top"><img alt=""></td>
+            <td class="border-Top border-Left"><img alt=""></td>
+        </tr>
+    </table>
+    <!-- <button id="reset">Reset</button> -->
+    <h2><img src="/img/Cross.png" alt="" class="tip"> = <span>Player 1</span></h2>
+    <h2><img src="/img/Circle.png" alt="" class="tip"> = <span>Player 2</span></h2>
+
+    <script src="/socket.io/socket.io.min.js"></script>
+    <script src="/lib/js/custom-alert.min.js"></script>
+    <script>
+        const username = "<%= user.username %>";
+        const room = "<%= user.room %>";
+    </script>
+
+    <script src="/game.js"></script>
+</body>
+</html>

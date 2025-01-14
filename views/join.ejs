@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% if (error && error.length > 0) { %>
+     <h1><%= error %> </h1>
+    <% } %>
+    <h1>Enter Name</h1>
+    <form action="/game" method="GET">
+        <input type="text" name="username" placeholder="Name">
+        <input type="text" placeholder="Room" oninput="changeFormUrl(this)">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function changeFormUrl(input) {
+            let url = "/game/" + input.value;
+            document.querySelector("form").action = url;
+        }
+    </script>
+</body>
+</html>
