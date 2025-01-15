@@ -16,6 +16,8 @@ const Users = require("./tools/users");
 //initializing user model
 let users = new Users();
 
+const PORT = process.env.PORT || 3000;
+
 //express session
 app.use(
   require("express-session")({
